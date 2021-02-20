@@ -21,6 +21,8 @@ class HtmlWebSocketChannel extends StreamChannelMixin
   @override
   String get protocol => _webSocket.protocol;
 
+  int get readyState => _webSocket.readyState;
+
   @override
   int get closeCode => _closeCode;
   int _closeCode;
