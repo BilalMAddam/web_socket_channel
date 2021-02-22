@@ -30,6 +30,8 @@ class WebSocketChannel extends StreamChannelMixin {
   /// the IO-specific pieces factored out.
   final WebSocketImpl _webSocket;
 
+  void close() => _webSocket.close();
+
   int get readyState => _webSocket.readyState;
 
   /// The subprotocol selected by the server.

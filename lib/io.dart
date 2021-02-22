@@ -21,6 +21,8 @@ class IOWebSocketChannel extends StreamChannelMixin
   /// `null` until the [WebSocket.connect] future completes.
   WebSocket _webSocket;
 
+  void close() => _webSocket.close();
+
   @override
   String get protocol => _webSocket?.protocol;
 

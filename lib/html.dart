@@ -18,6 +18,8 @@ class HtmlWebSocketChannel extends StreamChannelMixin
   /// The underlying `dart:html` [WebSocket].
   final WebSocket _webSocket;
 
+  void close() => _webSocket.close();
+
   @override
   String get protocol => _webSocket.protocol;
 
